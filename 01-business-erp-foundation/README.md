@@ -40,22 +40,11 @@ NordicFlow operates a simulated manufacturing network consisting of:
 
 The organisation purchases materials from external suppliers, maintains inventory across locations and uses materials and components to support manufacturing operations.
 
-Its ERP environment must therefore connect several business processes:
+Its ERP environment must therefore connect several interdependent business processes:
 
+**Supplier → Procurement → Material Receipt → Inventory → Production → Finished Product**
 
-Supplier
-   ↓
-Procurement
-   ↓
-Material Receipt
-   ↓
-Inventory
-   ↓
-BOM / Material Requirement
-   ↓
-Production
-   ↓
-Finished Product
+Material planning and BOM relationships operate across this flow by connecting component requirements, inventory availability and production demand.
 
 
 ## 3. Business Problem
@@ -204,3 +193,119 @@ For this reason, NordicFlow treats the following as prerequisites for future AI-
 The Phase I projects establish this foundation.
 
 AI-assisted analysis is treated as an extension of the governed analytical environment rather than a substitute for data modelling, data quality or business-process understanding.
+
+## 7. Core Business Questions
+
+The business and stakeholder requirements are translated into a structured set of analytical questions. These questions define what the later data-engineering, SQL, Python and Power BI stages must be capable of answering.
+
+### Inventory & Material Availability
+
+1. What is the latest inventory position and value across NordicFlow locations?
+2. How much inventory is unrestricted and available for operational use?
+3. Which material-plant positions are below safety stock?
+4. Which material-plant positions are below reorder point?
+5. Where is excess inventory concentrated?
+6. Can available stock at one location support a shortage or requirement at another location?
+
+### Procurement & Supplier Performance
+
+7. What is the overall supplier On-Time Delivery (OTD) performance?
+8. Which suppliers have the greatest delivery delays?
+9. Which suppliers create the highest combination of delivery and operational risk?
+10. Where are supplier-related quality rejections occurring?
+11. Which suppliers should receive management attention first?
+
+### Production Performance
+
+12. What percentage of production orders are completed on time?
+13. Is planned production quantity being achieved?
+14. Which production orders are affected by material shortages?
+15. What are the main causes of production delay?
+16. Which plants or production priorities show the greatest schedule risk?
+
+### BOM & Material Dependency
+
+17. Which components support the greatest number of finished products?
+18. Which critical components are below planning thresholds?
+19. Which material shortages could affect multiple finished products?
+20. Where does material dependency increase operational risk?
+
+### Inventory Rebalancing
+
+21. Which materials have shortage exposure at one plant while usable stock exists at another?
+22. What internal transfer opportunities can be identified?
+23. How much inventory could potentially be rebalanced before additional procurement is considered?
+
+### Executive Decision Support
+
+24. What are the most significant cross-functional operational risks?
+25. Which issues require immediate management attention?
+26. What evidence explains the underlying causes of those risks?
+27. What operational actions could reduce shortage, supplier and production exposure?
+
+These questions establish the analytical requirements. They do not assume the answers in advance; the evidence is developed progressively through Projects 03–06.
+
+---
+
+## 8. Information Requirements
+
+Answering the business questions requires connected master, transactional and planning data rather than isolated departmental reports.
+
+| Dataset | Business Purpose | Example Information Required |
+|---|---|---|
+| Material Master | Define materials and planning characteristics | Material ID, material name, material type, ABC class, criticality |
+| Plant Master | Define organisational and location structure | Plant ID, plant name, plant type/location |
+| Supplier Master | Define supplier characteristics | Supplier ID, supplier name, category, risk level, preferred status |
+| Inventory Snapshot | Measure material availability by location | Material, plant, stock quantities, safety stock, reorder point, inventory value |
+| Purchase Order Lines | Analyse procurement execution and supplier performance | Supplier, material, ordered quantity, expected delivery, actual delivery, receipt and rejection information |
+| Production Orders | Analyse manufacturing execution | Plant, production order, planned/actual quantity, planned/actual completion, priority, shortage indicator |
+| Bill of Materials | Connect components with dependent products | Finished product, component/material relationship |
+
+These datasets must support analysis across ERP processes rather than only within individual tables.
+
+For example:
+
+**Supplier → Purchase Order → Material → Inventory → Production Requirement**
+
+and:
+
+**Component → BOM → Finished Product**
+
+The analytical environment therefore depends on consistent identifiers, reliable master data and clearly defined relationships between operational datasets.
+
+---
+
+## 9. Analytical Grain
+
+Before building calculations or joining ERP datasets, the grain of each dataset must be explicitly defined.
+
+**Grain** describes what one row represents.
+
+| Dataset | Analytical Grain |
+|---|---|
+| Material Master | One row per material |
+| Supplier Master | One row per supplier |
+| Plant Master | One row per plant/location |
+| Inventory Snapshot | One row per material × plant × inventory snapshot |
+| Purchase Order Lines | One row per purchase-order line |
+| Production Orders | One row per production order |
+| Bill of Materials | One row per finished-product × component relationship |
+
+Defining grain is important because different ERP datasets represent different levels of business activity.
+
+For example, a material may:
+
+- exist at multiple plants,
+- appear on multiple purchase-order lines,
+- support multiple production orders,
+- and be used by multiple finished products through the BOM.
+
+Joining these datasets without respecting their grain can duplicate records, inflate quantities and produce misleading KPIs.
+
+The NordicFlow analytical design therefore follows three principles:
+
+1. **Preserve the natural grain of each source dataset.**
+2. **Use master-data keys to establish controlled relationships between business objects.**
+3. **Aggregate measures only at a level supported by the underlying transactional grain.**
+
+These requirements provide the bridge from business discovery into the ERP analytical data model developed in Project 02.
