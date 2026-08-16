@@ -309,3 +309,199 @@ The NordicFlow analytical design therefore follows three principles:
 3. **Aggregate measures only at a level supported by the underlying transactional grain.**
 
 These requirements provide the bridge from business discovery into the ERP analytical data model developed in Project 02.
+
+## 10. Business Rules & KPI Logic
+
+The analytical requirements must be translated into explicit business rules before technical calculations are implemented.
+
+This prevents KPI definitions from changing between Excel, SQL, Python and Power BI.
+
+### Supplier On-Time Delivery
+
+A purchase-order line is considered on time when the actual receipt date meets the required delivery date.
+
+Conceptually:
+
+**On Time = Actual Receipt Date ≤ Required Delivery Date**
+
+Supplier OTD is then calculated from the proportion of purchase-order lines meeting this rule.
+
+### Production On-Time Performance
+
+A production order is considered on time when actual completion does not exceed the planned completion date.
+
+Conceptually:
+
+**On Time = Actual End Date ≤ Planned End Date**
+
+### Production Attainment
+
+Production attainment compares actual production quantity with planned production quantity.
+
+Conceptually:
+
+**Production Attainment = Actual Quantity / Planned Quantity**
+
+This must be analysed separately from schedule performance because a production order can achieve the planned quantity and still finish late.
+
+### Safety-Stock Exposure
+
+A material-plant position is considered below safety stock when:
+
+**Available Stock < Safety Stock**
+
+### Reorder-Point Exposure
+
+A material-plant position is considered below reorder point when:
+
+**Available Stock < Reorder Point**
+
+### Internal Rebalancing
+
+A transfer opportunity can exist when the same material has:
+
+- shortage exposure at one location, and
+- usable surplus stock at another location.
+
+The recommended transfer quantity must respect both the destination requirement and the amount that can be transferred without creating a new shortage at the source.
+
+### BOM Dependency
+
+Material risk should consider not only stock quantity but also the number and criticality of finished products that depend on the component.
+
+These business definitions are implemented and validated progressively in later project stages.
+
+---
+
+## 11. Scope Boundaries
+
+Project 01 defines the Phase I analytical scope.
+
+### Included
+
+- ERP master data
+- supplier management
+- procurement
+- inventory availability
+- material planning parameters
+- production execution
+- BOM relationships
+- inter-plant inventory analysis
+- cross-functional operational risk
+- management KPI requirements
+- analytical validation requirements
+
+### Outside Phase I
+
+The following are intentionally excluded from the completed Phase I implementation:
+
+- live SAP, IFS or other ERP-system integration
+- automated production ERP transactions
+- financial accounting and controlling processes
+- sales-order and customer-service processes
+- warehouse-management execution
+- automated MRP runs
+- predictive machine-learning models
+- production deployment
+- autonomous AI decision-making
+
+These boundaries keep the simulation focused on ERP operational analytics and decision support.
+
+---
+
+## 12. Decision-Support & AI-Readiness Principle
+
+NordicFlow is designed as a decision-support environment rather than a collection of disconnected reports.
+
+The target analytical progression is:
+
+**Business Problem → ERP Process → Governed Data → Analytical Model → KPI → Insight → Decision → Action**
+
+A further design principle is that future AI-assisted analytics should operate on the same governed foundation.
+
+AI-assisted analysis can potentially support tasks such as:
+
+- natural-language exploration of business metrics
+- assisted analytical investigation
+- explanation of KPI changes
+- generation or refinement of analytical calculations
+- management-question exploration
+- guided decision support
+
+However, these capabilities depend on reliable underlying information.
+
+For this reason, NordicFlow treats the following as prerequisites for AI-assisted analysis:
+
+- validated ERP data
+- explicit business definitions
+- controlled relationships
+- documented KPI logic
+- reliable semantic modelling
+- traceable calculations
+- human review of business conclusions
+
+The Phase I projects establish these prerequisites.
+
+AI-assisted functionality is therefore positioned as a future analytical layer built on top of trusted ERP data and semantic models, not as a replacement for data quality, ERP knowledge or analytical judgement.
+
+---
+
+## 13. Project 01 Deliverable
+
+Project 01 produces the business and requirements foundation for the complete NordicFlow ERP Analytics portfolio.
+
+The key deliverables are:
+
+- business scenario definition
+- ERP process scope
+- stakeholder decision requirements
+- core business questions
+- information requirements
+- analytical grain definitions
+- business rules
+- KPI logic
+- project scope boundaries
+- decision-support architecture
+- AI-readiness principles
+
+The output of Project 01 can be summarised as:
+
+**Business Problem → Requirements → Information Needs → Business Rules → Analytical Scope**
+
+No analytical result is claimed at this stage.
+
+The purpose is to define what must be modelled, validated and analysed before technical implementation begins.
+
+---
+
+## 14. Handover to Project 02
+
+The requirements defined in Project 01 are converted into an ERP analytical data structure in:
+
+### [Project 02 — ERP Data Model & Baseline](../02-erp-data-model/)
+
+Project 02 defines:
+
+- ERP entities
+- table grain
+- primary keys
+- foreign keys
+- relationships
+- cardinality
+- baseline data
+- business-rule controls
+- validation structure
+
+This creates the controlled data foundation required by Projects 03–06.
+
+---
+
+## Simulation Notice
+
+**NordicFlow Manufacturing Oy is fictional.**
+
+The company, datasets and business scenarios were created for an ERP and data analytics portfolio simulation.
+
+The project does not represent a live client ERP implementation or production environment.
+
+The business-analysis methodology, data modelling, validation, analytical implementation and management recommendations are presented as portfolio evidence of an end-to-end ERP and data analytics workflow.
