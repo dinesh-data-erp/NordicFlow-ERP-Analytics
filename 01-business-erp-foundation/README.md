@@ -42,7 +42,7 @@ The organisation purchases materials from external suppliers, maintains inventor
 
 Its ERP environment must therefore connect several business processes:
 
-```text
+
 Supplier
    ↓
 Procurement
