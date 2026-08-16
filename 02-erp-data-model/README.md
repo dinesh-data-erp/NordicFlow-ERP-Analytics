@@ -90,28 +90,7 @@ The main identifiers used to connect the datasets are:
 - purchase-order / line identifier
 - finished-product and component identifiers in the BOM
 
-The basic relationship logic is:
-
-```text
-Material Master
-     │
-     ├── Inventory Snapshot
-     │
-     ├── Purchase Order Lines
-     │
-     └── BOM / Component relationship
-
-Plant Master
-     │
-     ├── Inventory Snapshot
-     └── Production Orders
-
-Supplier Master
-     │
-     └── Purchase Order Lines
-
-
-## 6. Actual Keys Used in the Model
+## 5. Actual Keys Used in the Model
 
 The seven tables use a mix of single-field and composite business keys.
 
@@ -131,7 +110,7 @@ The operational tables are different. A purchase order can have several lines, a
 
 ---
 
-## 7. Foreign Keys
+## 6. Foreign Keys
 
 The main foreign keys connect transactions and operational records back to trusted master data.
 
@@ -153,7 +132,7 @@ A purchase-order line, for example, should not contain a supplier, material or p
 
 ---
 
-## 8. Relationship Design
+## 7. Relationship Design
 
 The baseline relationship model uses mainly one-to-many relationships.
 
@@ -179,7 +158,7 @@ This later helped when the same structure was implemented in SQL and Power BI.
 
 ---
 
-## 9. One Important BOM Modelling Issue
+## 8. One Important BOM Modelling Issue
 
 The BOM was the most interesting part of the relationship design.
 
@@ -212,7 +191,7 @@ The final Power BI model therefore did not simply activate every possible BOM re
 
 ---
 
-## 10. Relationship Risks
+## 9. Relationship Risks
 
 I also documented what could go wrong if the relationships or keys were incorrect.
 
@@ -229,7 +208,7 @@ This was useful later because data-quality testing was not treated only as check
 
 ---
 
-## 11. Key Validation
+## 10. Key Validation
 
 Before using the model for analysis, I defined checks for the most important key and relationship rules.
 
@@ -250,7 +229,7 @@ The aim was simple: no orphan records and no duplicate business keys before anal
 
 ---
 
-## 12. End-to-End Validation Example
+## 11. End-to-End Validation Example
 
 The model was also tested with business scenarios, not only technical key checks.
 
