@@ -57,7 +57,6 @@ Production
    ↓
 Finished Product
 
----
 
 ## 3. Business Problem
 
