@@ -1,0 +1,6 @@
+﻿root_cause_category,evidence_count,evidence
+Material availability,8,Plant-material positions below safety stock
+Quality restriction,2,Plant-material positions with quality-inspection stock
+Supplier / purchasing delay,13,Purchase order lines delivered after required date
+Planning master data,11,Materials where average actual PO lead time exceeds planned lead time
+Production material shortage,9,Production orders flagged for material shortage

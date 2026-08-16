@@ -1,0 +1,9 @@
+﻿Supplier_ID,Supplier_Name,Risk_Level,otd_pct,avg_delay_days,rejection_pct,review_priority
+SUP-004,ControlPro Sp. z o.o.,High,0.0,16.3,0.0,High Review Priority
+SUP-007,FlowSensor BV,Medium,0.0,7.0,0.0,High Review Priority
+SUP-001,Nordic Motors AB,Medium,33.3,3.0,0.0,High Review Priority
+SUP-002,SealTech Oy,Medium,50.0,0.0,22.67,High Review Priority
+SUP-005,Baltic Valve AS,Medium,50.0,1.0,0.0,High Review Priority
+SUP-006,FinnSteel Components Oy,Low,50.0,1.8,0.0,High Review Priority
+SUP-003,BearingWorks GmbH,Low,66.7,0.7,0.0,High Review Priority
+SUP-008,FastenNordic Oy,Low,100.0,-1.0,0.0,Monitor

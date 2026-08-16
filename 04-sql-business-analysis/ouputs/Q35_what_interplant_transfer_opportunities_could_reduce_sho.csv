@@ -1,0 +1,7 @@
+﻿Material_ID,Material_Name,shortage_plant,shortage_plant_qty,Safety_Stock_Qty,source_plant,source_plant_qty,indicative_transfer_qty
+CMP-1015,PVC Hose 10 mm,PLT-2000,15,100,PLT-1000,610,85.0
+CMP-1010,Fastener Kit Standard,PLT-2000,17,40,PLT-1000,260,23.0
+CMP-1004,Control Panel Basic,PLT-1000,2,8,PLT-2000,43,6.0
+CMP-1002,Mechanical Seal Type A,PLT-1000,15,20,PLT-2000,34,5.0
+CMP-1001,7.5 kW Electric Motor,PLT-1000,7,10,PLT-2000,30,3.0
+CMP-1003,Standard Bearing Set,PLT-2000,24,25,PLT-1000,44,1.0

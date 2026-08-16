@@ -1,0 +1,9 @@
+﻿Supplier_ID,Supplier_Name,received_lines,on_time_delivery_pct,target_on_time_pct
+SUP-004,ControlPro Sp. z o.o.,3,0.0,90.0
+SUP-007,FlowSensor BV,1,0.0,92.0
+SUP-001,Nordic Motors AB,3,33.3,95.0
+SUP-002,SealTech Oy,2,50.0,94.0
+SUP-005,Baltic Valve AS,4,50.0,93.0
+SUP-006,FinnSteel Components Oy,6,50.0,97.0
+SUP-003,BearingWorks GmbH,3,66.7,96.0
+SUP-008,FastenNordic Oy,2,100.0,98.0

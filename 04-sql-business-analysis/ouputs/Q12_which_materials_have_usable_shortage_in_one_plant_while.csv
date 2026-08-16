@@ -1,0 +1,9 @@
+﻿Material_ID,Material_Name,shortage_plant,shortage_plant_qty,Safety_Stock_Qty,other_plant,other_plant_qty
+CMP-1001,7.5 kW Electric Motor,PLT-1000,7,10,PLT-2000,30
+CMP-1002,Mechanical Seal Type A,PLT-1000,15,20,PLT-2000,34
+CMP-1003,Standard Bearing Set,PLT-2000,24,25,PLT-1000,44
+CMP-1004,Control Panel Basic,PLT-1000,2,8,PLT-2000,43
+CMP-1010,Fastener Kit Standard,PLT-2000,17,40,PLT-1000,260
+CMP-1013,Filter Cartridge 10 Micron,PLT-1000,18,30,PLT-2000,24
+CMP-1013,Filter Cartridge 10 Micron,PLT-2000,24,30,PLT-1000,18
+CMP-1015,PVC Hose 10 mm,PLT-2000,15,100,PLT-1000,610
