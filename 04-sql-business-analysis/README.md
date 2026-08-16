@@ -67,3 +67,83 @@ The final queries bring these areas together.
 The aim is to move from:
 
 **What happened? → Why did it happen? → Where should management act?**
+
+## 4. SQL Analysis Approach
+
+I built the analysis in layers rather than starting directly with KPI queries.
+
+The SQL package contains **40 tested queries**, grouped into:
+
+1. database validation
+2. inventory analysis
+3. procurement and supplier analysis
+4. production analysis
+5. executive and cross-functional analysis
+6. reusable views
+
+I used joins, CTEs, aggregations, CASE logic, date calculations and business-rule filters.
+
+One important example was inventory.
+
+The dataset contains several inventory snapshots. Summing every historical row would overstate the current stock position. I therefore used the **latest valid snapshot** when calculating current inventory KPIs.
+
+This type of check was important throughout the project. A query can run successfully and still give the wrong business answer.
+
+---
+
+## 5. Selected Findings
+
+The SQL analysis exposed several connected operational issues.
+
+| Finding | SQL Result |
+|---|---:|
+| Latest inventory value | €199,256.50 |
+| Supplier On-Time Delivery | 45.8% |
+| Production On-Time Performance | 26.7% |
+| Production orders affected by shortages | 9 |
+
+The numbers become more useful when they are viewed together.
+
+### Inventory & Rebalancing
+
+Inventory was not only analysed as total stock value.
+
+I compared stock position with safety stock, reorder points and availability across plants. This exposed cases where one location had a requirement while another location held usable stock.
+
+That created a practical management question:
+
+**Can internal rebalancing reduce unnecessary purchasing or shortage exposure?**
+
+### Supplier Performance
+
+Overall supplier OTD was only **45.8%**.
+
+The supplier queries then went deeper into individual delivery performance, average delays and quality issues instead of stopping at the overall KPI.
+
+This helped separate reliable suppliers from suppliers that may require follow-up.
+
+### Production
+
+Production on-time performance was **26.7%**, while **9 production orders** were affected by material shortages.
+
+I compared planned and actual completion dates and investigated delay reasons and shortage indicators.
+
+This showed why quantity alone is not enough to judge production performance. An order can achieve its quantity target and still be operationally late.
+
+---
+
+## 6. From KPI to Root Cause
+
+The most useful part of the SQL work was connecting the ERP areas.
+
+For example:
+
+**Supplier delay → material availability risk → production shortage → late production order**
+
+Not every late production order can be blamed on a supplier. But SQL made it possible to test these relationships instead of assuming the cause.
+
+The executive queries therefore combined evidence from inventory, procurement, production and BOM data.
+
+The aim was not to produce more KPIs.
+
+It was to identify where management should investigate or act.
