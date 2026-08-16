@@ -147,3 +147,56 @@ The executive queries therefore combined evidence from inventory, procurement, p
 The aim was not to produce more KPIs.
 
 It was to identify where management should investigate or act.
+
+## 7. Technical Evidence
+
+The SQL work is kept in separate scripts so each stage can be reviewed independently.
+
+```text
+sql/
+├── 00_schema.sql
+├── 01_database_validation.sql
+├── 02_inventory_analysis.sql
+├── 03_procurement_analysis.sql
+├── 04_production_analysis.sql
+├── 05_executive_analysis.sql
+├── 06_reusable_views.sql
+└── SQL_Query_Library.sql
+```
+
+The analysis used SQL techniques such as:
+
+- joins across ERP tables
+- CTEs and aggregations
+- CASE logic
+- date calculations
+- latest-snapshot filtering
+- validation queries
+- reusable views
+- cross-functional analysis
+
+Selected query outputs and screenshots are also included as evidence of the results.
+
+---
+
+## 8. What I Learned
+
+This project changed how I look at SQL.
+
+Writing a query that runs is only the first step. I also had to check the data grain, relationships, dates and business definition behind each KPI.
+
+A small mistake in any of these can produce a believable but wrong result.
+
+So my working approach became:
+
+**Business Question → SQL Logic → Validation → Finding → Management Action**
+
+---
+
+## 9. Next Project
+
+### [Project 05 — Python ERP Analytics](../05-python-erp-analytics/)
+
+Project 05 continues the same NordicFlow dataset in Python.
+
+The next step is to use Python for deeper investigation, repeatable analysis and visual exploration before the final Power BI decision-support layer.
