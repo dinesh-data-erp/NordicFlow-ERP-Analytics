@@ -1,0 +1,9 @@
+﻿Supplier_ID,Supplier_Name,Supplier_Country,Supplier_Category,Payment_Terms_Days,Risk_Level,Preferred_Status,Active_Status,Target_Lead_Time_Days,Target_On_Time_Rate
+SUP-001,Nordic Motors AB,Sweden,Motors,30,Medium,TRUE,TRUE,28,95.00 %
+SUP-002,SealTech Oy,Finland,Seals,21,Medium,TRUE,TRUE,18,94.00 %
+SUP-003,BearingWorks GmbH,Germany,Bearings,30,Low,TRUE,TRUE,12,96.00 %
+SUP-004,ControlPro Sp. z o.o.,Poland,Electrical,30,High,TRUE,TRUE,30,90.00 %
+SUP-005,Baltic Valve AS,Estonia,Valves and Filters,21,Medium,TRUE,TRUE,16,93.00 %
+SUP-006,FinnSteel Components Oy,Finland,Fabricated Components,14,Low,TRUE,TRUE,10,97.00 %
+SUP-007,FlowSensor BV,Netherlands,Sensors,30,Medium,FALSE,TRUE,24,92.00 %
+SUP-008,FastenNordic Oy,Finland,Fasteners and Hose,14,Low,TRUE,TRUE,7,98.00 %

@@ -1,0 +1,4 @@
+﻿Plant_ID,Plant_Name,City,Plant_Type,Country,Active_Status
+PLT-1000,Tampere Manufacturing Plant,Tampere,Manufacturing,Finland,TRUE
+PLT-2000,Vaasa Manufacturing Plant,Vaasa,Manufacturing,Finland,TRUE
+PLT-3000,Vantaa Distribution Centre,Vantaa,Distribution,Finland,TRUE

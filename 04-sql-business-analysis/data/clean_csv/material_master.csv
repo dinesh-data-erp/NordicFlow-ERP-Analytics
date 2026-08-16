@@ -1,0 +1,21 @@
+﻿Material_ID,Material_Name,Material_Type,Material_Group,Base_Unit,Standard_Cost_EUR,Planned_Lead_Time_Days,Safety_Stock_Qty,Reorder_Point_Qty,ABC_Class,XYZ_Class,Criticality,Preferred_Supplier_ID,Active_Status
+CMP-1001,7.5 kW Electric Motor,Component,Motor,PC,€ 640.00,28,10,18,A,X,Critical,SUP-001,TRUE
+CMP-1002,Mechanical Seal Type A,Component,Seal,PC,€ 82.00,18,20,35,A,Y,Critical,SUP-002,TRUE
+CMP-1003,Standard Bearing Set,Component,Bearing,SET,€ 46.00,12,25,45,B,X,Important,SUP-003,TRUE
+CMP-1004,Control Panel Basic,Component,Electrical,PC,€ 420.00,14,8,14,A,Z,Critical,SUP-004,TRUE
+CMP-1005,Stainless Steel Valve DN50,Component,Valve,PC,€ 175.00,16,12,22,A,Y,Critical,SUP-005,TRUE
+CMP-1006,Pump Casing Small,Semi-Finished,Machined Casing,PC,€ 220.00,10,12,20,A,X,Important,SUP-006,TRUE
+CMP-1007,Pump Impeller Small,Semi-Finished,Machined Impeller,PC,€ 135.00,10,15,25,B,X,Important,SUP-006,TRUE
+CMP-1008,Powder-Coated Base Frame,Semi-Finished,Steel Frame,PC,€ 160.00,10,10,18,B,Y,Important,SUP-006,TRUE
+CMP-1009,Pressure Sensor 0-16 bar,Component,Sensor,PC,€ 95.00,24,8,15,B,Z,Critical,SUP-007,TRUE
+CMP-1010,Fastener Kit Standard,Component,Fastener,KIT,€ 18.00,7,40,80,C,X,Normal,SUP-008,TRUE
+CMP-1011,Pipe Assembly DN50,Semi-Finished,Pipe Assembly,PC,€ 145.00,10,12,20,B,Y,Important,SUP-006,TRUE
+CMP-1012,Filter Housing Standard,Semi-Finished,Filter Housing,PC,€ 310.00,12,8,15,A,Y,Important,SUP-006,TRUE
+CMP-1013,Filter Cartridge 10 Micron,Component,Filter Cartridge,PC,€ 28.00,14,30,60,C,X,Normal,SUP-005,TRUE
+CMP-1014,Dosing Pump 2 L/h,Component,Dosing Pump,PC,€ 290.00,21,6,12,A,Z,Critical,SUP-001,TRUE
+CMP-1015,PVC Hose 10 mm,Raw Material,Hose,M,€ 4.50,7,100,200,C,X,Normal,SUP-008,TRUE
+FG-1001,Compact Pump Unit,Finished Product,Pump System,PC,€ 2 450.00,7,2,4,A,X,Normal,,TRUE
+FG-1002,Industrial Pump Unit,Finished Product,Pump System,PC,€ 4 950.00,14,1,2,A,Y,Normal,,TRUE
+FG-2001,Standard Filtration Skid,Finished Product,Filtration System,PC,€ 7 200.00,18,1,2,A,Y,Normal,,TRUE
+FG-3001,Chemical Dosing System,Finished Product,Dosing System,PC,€ 6 100.00,16,1,2,A,Z,Normal,,TRUE
+FG-4001,Valve and Pipe Assembly,Finished Product,Industrial Assembly,PC,€ 3 100.00,10,2,3,B,Y,Normal,,TRUE
