@@ -245,3 +245,139 @@ The model needed to show both sides of the problem:
 Another scenario connected an incorrect planned lead time with late purchase-order receipts and production risk.
 
 These tests helped confirm that the model could trace a business issue across master data, transactions and inventory rather than only report isolated table values.
+
+## 12. Data and Business Rules
+
+A technically valid relationship does not mean the data is ready for analysis.
+
+I therefore defined basic rules for the important ERP fields. The rules cover uniqueness, completeness, valid values, referential integrity and business logic.
+
+Some examples:
+
+| Area | Example rule | Why it matters |
+|---|---|---|
+| Material | `Material_ID` must be unique | Prevent duplicate master records |
+| Supplier | `Supplier_ID` must be unique | Keep supplier analysis reliable |
+| Inventory | Quantity cannot be negative in this model | Avoid false stock positions |
+| Inventory | Material and plant must exist in master data | Prevent orphan inventory |
+| Inventory | Inventory value should agree with quantity × unit cost | Protect working-capital KPIs |
+| Purchase Orders | Supplier, material and plant must be valid | Keep transactions connected to master data |
+| BOM | Quantity per unit must be greater than zero | Prevent invalid material requirements |
+| BOM | A product cannot directly contain itself | Avoid invalid BOM structures |
+| Production | Finished product and plant must be valid | Keep production analysis connected correctly |
+
+These rules later became part of the more detailed data-quality work in Project 03.
+
+---
+
+## 13. Validation Approach
+
+I did not want to validate the model only by checking whether tables could be joined.
+
+The baseline was checked at three levels.
+
+### 1. Structural checks
+
+Do the expected tables and fields exist?
+
+Are key fields populated?
+
+### 2. Key and relationship checks
+
+Are business keys unique?
+
+Do foreign-key values exist in the related master tables?
+
+Are there duplicate or orphan records?
+
+### 3. Business checks
+
+Does the connected data behave correctly when a realistic operational problem is traced across several tables?
+
+This third level was especially useful. A model can be technically clean but still fail to represent the business correctly.
+
+---
+
+## 14. Business Scenario Testing
+
+I used controlled ERP scenarios to test whether the model could support the questions defined in Project 01.
+
+### Scenario 1 — Material Shortage and Inter-Plant Stock
+
+A production requirement in Tampere creates demand for a component.
+
+The model should allow the analysis to move through:
+
+**Production requirement → BOM component → Tampere inventory → stock availability at another location**
+
+The purpose was to test whether a local shortage could be investigated together with possible stock elsewhere in the network.
+
+### Scenario 2 — Supplier Lead Time and Production Risk
+
+Another scenario connects material planning with procurement performance.
+
+The model should support investigation of:
+
+**Planning parameter → Purchase order → Delivery timing → Material availability → Production risk**
+
+This tests whether a planning or supplier issue can be followed beyond the procurement table itself.
+
+The scenarios were not designed to prove a final management conclusion at this stage. They were used to confirm that the data structure could support later analysis.
+
+---
+
+## 15. Model Limitations
+
+This is a controlled simulation, so the model is intentionally smaller than a real manufacturing ERP environment.
+
+Some limitations are:
+
+- only selected ERP processes are included
+- inventory is based on controlled snapshot data rather than a full stock-movement history
+- there is no live ERP connection
+- financial accounting is outside the Phase I scope
+- sales and customer-order processes are not included
+- MRP is represented through planning data and analytical logic, not through a real MRP engine
+- BOM structures are simplified for the simulation
+- historical volumes are much smaller than a production ERP database
+
+These limits are intentional. The goal was to keep the dataset understandable while still creating enough complexity for cross-functional ERP analysis.
+
+---
+
+## 16. Project 02 Outcome
+
+Project 02 created the baseline for the rest of NordicFlow.
+
+At this point I had:
+
+- seven connected ERP datasets
+- defined table grain
+- business and composite keys
+- master-to-operational relationships
+- BOM role relationships
+- data and business rules
+- validation checks
+- controlled business scenarios
+
+But the baseline was still not the final analysis-ready dataset.
+
+The next question was:
+
+> **What happens when ERP data contains realistic quality problems?**
+
+That became Project 03.
+
+---
+
+## 17. Next Project
+
+### [Project 03 — Excel Data Engineering & Data Quality](../03-excel-data-engineering/)
+
+Project 03 takes the controlled ERP baseline and introduces realistic data-quality problems.
+
+The work then moves through:
+
+**Baseline → Data Profiling → Issue Identification → Governance → Cleaning → Revalidation → Clean ERP Release**
+
+The clean release becomes the trusted source for the later SQL, Python and Power BI projects.
