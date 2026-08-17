@@ -147,12 +147,6 @@ When inventory was viewed across plants, some excess stock could potentially sup
 
 The final Power BI report brings inventory, procurement, supplier, production and BOM information into one connected management view.
 
-### Executive Overview
-
-The overview gives management the main operational signals first, with access to deeper investigation when needed.
-
-![NordicFlow Executive Overview](06-power-bi-executive-dashboard/screenshots/01-executive-overview.png)
-
 ### Inventory Rebalancing
 
 The rebalancing page looks for situations where excess stock at one plant may support demand at another.
