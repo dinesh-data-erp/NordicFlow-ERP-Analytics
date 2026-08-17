@@ -150,3 +150,77 @@ This was useful because an attractive dashboard is not enough if the underlying 
 The workflow became:
 
 **ERP data → Excel data engineering → SQL analysis → Python investigation → Power BI decision support**
+
+## 9. Technical Evidence
+
+The Python work is kept in separate notebooks so each analytical stage can be reviewed.
+
+**Notebooks**
+
+- `01_Data_Loading_and_Preparation.ipynb`
+- `02_Inventory_Analytics.ipynb`
+- `03_Supplier_Performance_Analytics.ipynb`
+- `04_Production_Analytics.ipynb`
+- `05_Executive_Analytics.ipynb`
+
+A reusable loading script is also included:
+
+- `scripts/erp_data_loader.py`
+
+The project demonstrates practical use of:
+
+- Python
+- pandas
+- Jupyter Notebook
+- data loading and preparation
+- filtering and aggregation
+- calculated business measures
+- ERP data analysis
+- data validation
+- basic analytical visualisation
+
+Selected outputs and screenshots are included in the repository as evidence of the analysis.
+
+---
+
+## 10. What I Learned
+
+Python was useful after SQL because I could investigate the data more freely and test different views of the same business problem.
+
+The biggest learning was not a Python function or library. It was understanding how the tools work together.
+
+SQL helped me answer structured questions from the ERP database. Python helped me investigate those results and look for patterns. Power BI could then present the important findings in a form that management can use.
+
+So I see these tools as connected parts of one analytical process, not separate technical skills.
+
+---
+
+## 11. Project Limitations
+
+NordicFlow uses simulated ERP data and the dataset is relatively small.
+
+The Python analysis is therefore focused on business analysis and workflow demonstration. It is not intended to represent large-scale production data engineering or machine-learning work.
+
+The project also uses static data rather than a live ERP connection.
+
+A future version could extend this work with automated data pipelines, larger transaction volumes, forecasting and AI-assisted analysis.
+
+---
+
+## 12. Next Project
+
+### [Project 06 — Power BI Executive Dashboard](../06-power-bi-executive-dashboard/)
+
+Project 06 takes the validated ERP analysis into Power BI.
+
+The focus moves from investigation to decision support. The final solution connects inventory, procurement, supplier performance, production, BOM risk and internal rebalancing in one interactive reporting environment.
+
+It also adds drill-through analysis, report-page tooltips, management insights and action-oriented views.
+
+---
+
+## Simulation Notice
+
+NordicFlow Manufacturing Oy is a fictional organisation created for portfolio and learning purposes.
+
+The datasets and business scenario are simulated. The project demonstrates my approach to ERP data analysis using Python rather than work completed for an actual NordicFlow client.
