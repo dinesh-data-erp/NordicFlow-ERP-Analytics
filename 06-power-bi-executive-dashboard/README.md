@@ -190,3 +190,105 @@ Or:
 → prioritise supplier improvement action
 
 This was an important part of the project for me. A KPI becomes more useful when I can connect it to the business process behind it and the decision that may follow.
+
+## 9. Power BI Skills Used
+
+This project gave me a chance to bring the earlier ERP analysis into one working Power BI solution.
+
+The main areas I worked with were:
+
+- data modelling and table relationships
+- DAX measures and calculated business KPIs
+- filter context
+- slicers and cross-filtering
+- conditional formatting
+- drill-through pages
+- report-page tooltips
+- bookmarks and reset-filter controls
+- page navigation
+- management-focused dashboard design
+
+I also learned that adding more features does not always improve a report.
+
+For example, some tooltip behaviour depended strongly on the filter context of the source visual. Where it did not behave reliably, I kept the interaction simple instead of forcing the feature.
+
+---
+
+## 10. Validation and QA
+
+Before closing the Power BI stage, I checked the report page by page.
+
+The final review covered:
+
+- KPI values against the underlying analysis
+- slicer behaviour
+- visual interactions
+- drill-through behaviour
+- report-page tooltips
+- navigation and back buttons
+- reset-filter bookmarks
+- table and chart consistency
+- labels, titles and number formatting
+
+Some visuals were adjusted during this stage when the first design could give a confusing result.
+
+The final QA was completed before preparing the project for GitHub.
+
+---
+
+## 11. What I Learned
+
+The biggest lesson from Project 06 was that building a dashboard is only one part of Power BI work.
+
+The harder part was deciding what the user should see first, what detail should stay behind the main page and how one business problem connects with another.
+
+Inventory, procurement and production looked like separate topics at the beginning. After working through the data, the links became much clearer.
+
+A supplier delay can affect material availability. A material shortage can affect production. But excess stock at another plant may change the action completely.
+
+That business connection became more important to me than adding another chart.
+
+---
+
+## 12. Limitations and Next Development
+
+NordicFlow is a simulated environment using static data. It is not connected to a live ERP system.
+
+The current solution also does not include automated refresh pipelines, forecasting or production deployment.
+
+A useful next stage would be to explore AI-assisted analysis on top of a trusted semantic model. The important point would still be the same: AI should work from clear business definitions and reliable data.
+
+A possible future flow is:
+
+**ERP Data → Data Quality → SQL / Python → Semantic Model → Power BI → AI-Assisted Analysis → Decision / Action**
+
+This is planned as a future extension rather than a feature of the current dashboard.
+
+---
+
+## 13. End-to-End Project Result
+
+Project 06 completes the first major phase of NordicFlow.
+
+The work developed through a connected sequence:
+
+1. Business and ERP requirements
+2. ERP data model and baseline
+3. Excel data engineering and quality work
+4. SQL business analysis
+5. Python ERP analytics
+6. Power BI decision support
+
+Each stage uses the work from the previous stage rather than acting as a separate portfolio exercise.
+
+For me, this is the main value of NordicFlow. It shows the full path from an ERP business problem and raw operational data to analysis, management insight and possible action.
+
+Projects 07–12 remain future development areas and are described separately in the project roadmap.
+
+---
+
+## Simulation Notice
+
+NordicFlow Manufacturing Oy is a fictional organisation created for portfolio and learning purposes.
+
+The data, business cases and management situations are simulated. The project demonstrates my approach to ERP, data analysis and decision-support work. It does not represent a real NordicFlow client implementation.
