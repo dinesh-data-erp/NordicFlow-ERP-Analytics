@@ -56,6 +56,97 @@ Inventory / Supplier / Production Analysis
 Visual Checks
    ↓
 Executive Analysis
-```
    ↓
 Power BI
+```
+
+## 4. Inventory Analysis
+
+The inventory notebook looked at stock availability across NordicFlow locations.
+
+The analysis focused on materials below planning thresholds and cases where stock was not balanced between plants.
+
+Main checks included:
+
+- available stock by material and plant
+- safety stock comparison
+- reorder-point exposure
+- excess stock
+- possible stock movement between locations
+
+One important point was that total stock alone was not enough. A material can have enough stock overall but still create a shortage at one plant.
+
+This later became an important part of the inventory and rebalancing views in Power BI.
+
+---
+
+## 5. Supplier Performance Analysis
+
+Supplier performance was analysed using purchase-order delivery data.
+
+The main measure was On-Time Delivery (OTD). I also compared suppliers to see where delays were concentrated.
+
+The analysis showed a clear difference between suppliers. Some performed well, while others created more delivery risk.
+
+For example, supplier OTD ranged from **100% for FastenNordic Oy** to **33.3% for Nordic Motors AB**.
+
+This helped move the analysis from a general supplier KPI to a more useful question:
+
+**Which suppliers need management attention first?**
+
+---
+
+## 6. Production Analysis
+
+The production notebook compared planned and actual production performance.
+
+The analysis included:
+
+- production orders
+- planned and actual quantities
+- planned and actual completion dates
+- production delay
+- on-time completion
+- material-shortage impact
+
+The data showed that production quantity and production timing should not be treated as the same thing.
+
+A production order may achieve its quantity target but still finish late.
+
+Material shortages were also connected with several delayed orders. This created a link between inventory, procurement and production rather than treating production performance separately.
+
+---
+
+## 7. Executive Analysis
+
+The final notebook brought the operational areas together.
+
+Instead of adding more individual KPIs, I focused on the findings that could support a management decision.
+
+Examples included:
+
+- weak supplier delivery performance
+- material shortage exposure
+- production schedule risk
+- excess inventory at another location
+- opportunities for internal stock transfer
+
+The Python stage therefore became a bridge between detailed ERP analysis and the final management dashboard.
+
+The objective was simple: not only show what happened, but give enough context to decide what should be investigated or acted on next.
+
+---
+
+## 8. Cross-Tool Validation
+
+The same ERP business problems were analysed through more than one stage of the project.
+
+SQL was used for structured querying and business-rule analysis. Python was then used for further investigation and visual checking.
+
+The results were later compared with the Power BI semantic model and dashboard.
+
+This was useful because an attractive dashboard is not enough if the underlying numbers cannot be explained or checked.
+
+The workflow became:
+
+**ERP data → Excel data engineering → SQL analysis → Python investigation → Power BI decision support**
