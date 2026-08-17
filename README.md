@@ -73,7 +73,7 @@ Power BI Semantic Model
 Cross-Functional Business Insights
       ↓
 Management Decisions & Actions
----
+```
 
 ## Phase I — Completed ERP Analytics Workflow
 
