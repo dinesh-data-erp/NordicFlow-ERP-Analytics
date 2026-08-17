@@ -1,17 +1,39 @@
 # NordicFlow ERP Analytics
 
-## End-to-End ERP, Data Engineering & Business Analytics Simulation
+### ERP Data Quality • SQL • Python • Power BI • Decision Support
 
-NordicFlow is a fictional manufacturing ERP environment developed as an end-to-end portfolio case study covering business requirements, ERP data modelling, data quality management, SQL analysis, Python analytics and Power BI management decision support.
+NordicFlow is an end-to-end manufacturing ERP analytics simulation built to show how operational data can move from raw ERP records to useful management decisions.
 
-The project was designed around a realistic operational problem:
+The case connects procurement, inventory, suppliers, production and BOM data across one analytical workflow.
 
-> How can a manufacturing company experience material shortages and production delays even while significant inventory exists elsewhere in the organisation?
+**Business question:**
 
-Rather than treating Excel, SQL, Python and Power BI as separate exercises, NordicFlow follows one connected analytical lifecycle from business problem definition through data governance, analysis and management action.
+> How can a manufacturing company face material shortages and production delays while inventory is available elsewhere in the organisation?
+
+Instead of treating Excel, SQL, Python and Power BI as separate exercises, I used them at different stages of the same ERP problem.
+
+**Workflow**
+
+`Business Requirements → ERP Data Model → Data Quality → SQL → Python → Power BI → Management Decision Support`
+
+**Tools**
+
+`Excel` · `SQL / SQLite` · `Python / pandas` · `Jupyter Notebook` · `Power BI` · `DAX` · `ERP Data Modelling`
+
+**Phase I:** Projects 01–06 completed  
+**Phase II:** Projects 07–12 planned — ERP root-cause analysis, MRP simulation, migration/UAT and AI-assisted ERP analytics
+
+[View the development roadmap](ROADMAP.md)
 
 ---
 
+## Dashboard Preview
+
+![NordicFlow Executive Overview](06-power-bi-executive-dashboard/screenshots/01-executive-overview.png)
+
+*Executive view connecting inventory, supplier and production signals for management review.*
+
+---
 ## Business Challenge
 
 NordicFlow operates a simulated manufacturing and distribution network involving purchasing, inventory management, production planning, supplier management, Bills of Materials and inter-plant material movement.
