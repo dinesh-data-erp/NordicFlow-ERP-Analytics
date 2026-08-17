@@ -1,0 +1,8 @@
+Supplier_ID,PO_Lines,Received_Qty,Received_Spend_EUR,Avg_Lead_Time_Days,Avg_Delivery_Delay_Days,Quality_Rejected_Qty,On_Time_Delivery_Pct,Supplier_Name,Supplier_Country,Risk_Level,Preferred_Status,Target_Lead_Time_Days,Target_On_Time_Rate,Target_On_Time_Pct,OTD_Gap_Pct,Quality_Rejection_Pct,Review_Priority
+SUP-001,3,63,40206.0,30.666666666666668,3.0,0,33.33333333333333,Nordic Motors AB,Sweden,Medium,TRUE,28,95.0,9500.0,-9466.666666666666,0.0,High Review Priority
+SUP-002,2,75,6105.0,20.0,0.0,17,50.0,SealTech Oy,Finland,Medium,TRUE,18,94.0,9400.0,-9350.0,22.666666666666664,High Review Priority
+SUP-003,3,131,5953.26,15.666666666666666,0.6666666666666666,0,66.66666666666666,BearingWorks GmbH,Germany,Low,TRUE,12,96.0,9600.0,-9533.333333333334,0.0,High Review Priority
+SUP-004,3,36,15250.0,35.333333333333336,16.333333333333332,0,0.0,ControlPro Sp. z o.o.,Poland,High,TRUE,30,90.0,9000.0,-9000.0,0.0,High Review Priority
+SUP-005,4,142,8326.69,18.25,1.0,0,50.0,Baltic Valve AS,Estonia,Medium,TRUE,16,93.0,9300.0,-9250.0,0.0,High Review Priority
+SUP-006,6,234,43052.76,14.833333333333334,1.8333333333333333,0,50.0,FinnSteel Components Oy,Finland,Low,TRUE,10,97.0,9700.0,-9650.0,0.0,High Review Priority
+SUP-007,1,18,1728.0,33.0,7.0,0,0.0,FlowSensor BV,Netherlands,Medium,FALSE,24,92.0,9200.0,-9200.0,0.0,High Review Priority

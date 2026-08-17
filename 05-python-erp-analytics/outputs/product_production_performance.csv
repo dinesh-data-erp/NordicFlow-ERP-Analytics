@@ -1,0 +1,6 @@
+Finished_Product_ID,Production_Orders,Average_Delay_Days,Maximum_Delay_Days,Planned_Qty,Actual_Qty,Material_ID,Material_Name
+FG-1001,3,5.333333333333333,6,41,41,FG-1001,Compact Pump Unit
+FG-1002,3,5.333333333333333,6,27,26,FG-1002,Industrial Pump Unit
+FG-2001,3,0.0,0,15,15,FG-2001,Standard Filtration Skid
+FG-3001,3,6.333333333333333,7,16,16,FG-3001,Chemical Dosing System
+FG-4001,3,0.6666666666666666,1,33,33,FG-4001,Valve and Pipe Assembly

@@ -1,0 +1,31 @@
+Material_ID,Plant_ID,Unrestricted_Qty,Inventory_Value_EUR,Material_Name,Safety_Stock_Qty,Reorder_Point_Qty,ABC_Class,XYZ_Class,Criticality,Preferred_Supplier_ID,Below_Safety_Stock,Safety_Stock_Gap,Below_Reorder_Point,Reorder_Gap
+CMP-1001,PLT-1000,7,4480.0,7.5 kW Electric Motor,10,18,A,X,Critical,SUP-001,True,3,True,11
+CMP-1001,PLT-2000,30,19200.0,7.5 kW Electric Motor,10,18,A,X,Critical,SUP-001,False,-20,False,-12
+CMP-1002,PLT-1000,15,1230.0,Mechanical Seal Type A,20,35,A,Y,Critical,SUP-002,True,5,True,20
+CMP-1002,PLT-2000,34,2788.0,Mechanical Seal Type A,20,35,A,Y,Critical,SUP-002,False,-14,True,1
+CMP-1003,PLT-1000,44,2024.0,Standard Bearing Set,25,45,B,X,Important,SUP-003,False,-19,True,1
+CMP-1003,PLT-2000,24,1104.0,Standard Bearing Set,25,45,B,X,Important,SUP-003,True,1,True,21
+CMP-1004,PLT-1000,2,840.0,Control Panel Basic,8,14,A,Z,Critical,SUP-004,True,6,True,12
+CMP-1004,PLT-2000,43,18060.0,Control Panel Basic,8,14,A,Z,Critical,SUP-004,False,-35,False,-29
+CMP-1005,PLT-1000,13,2275.0,Stainless Steel Valve DN50,12,22,A,Y,Critical,SUP-005,False,-1,True,9
+CMP-1005,PLT-2000,28,4900.0,Stainless Steel Valve DN50,12,22,A,Y,Critical,SUP-005,False,-16,False,-6
+CMP-1006,PLT-1000,40,8800.0,Pump Casing Small,12,20,A,X,Important,SUP-006,False,-28,False,-20
+CMP-1006,PLT-2000,17,3740.0,Pump Casing Small,12,20,A,X,Important,SUP-006,False,-5,True,3
+CMP-1007,PLT-1000,26,3510.0,Pump Impeller Small,15,25,B,X,Important,SUP-006,False,-11,False,-1
+CMP-1007,PLT-2000,33,4455.0,Pump Impeller Small,15,25,B,X,Important,SUP-006,False,-18,False,-8
+CMP-1008,PLT-1000,12,1920.0,Powder-Coated Base Frame,10,18,B,Y,Important,SUP-006,False,-2,True,6
+CMP-1008,PLT-2000,17,2720.0,Powder-Coated Base Frame,10,18,B,Y,Important,SUP-006,False,-7,True,1
+CMP-1009,PLT-1000,24,2280.0,Pressure Sensor 0-16 bar,8,15,B,Z,Critical,SUP-007,False,-16,False,-9
+CMP-1009,PLT-2000,39,3705.0,Pressure Sensor 0-16 bar,8,15,B,Z,Critical,SUP-007,False,-31,False,-24
+CMP-1010,PLT-1000,260,4680.0,Fastener Kit Standard,40,80,C,X,Normal,SUP-008,False,-220,False,-180
+CMP-1010,PLT-2000,17,306.0,Fastener Kit Standard,40,80,C,X,Normal,SUP-008,True,23,True,63
+CMP-1011,PLT-1000,20,2900.0,Pipe Assembly DN50,12,20,B,Y,Important,SUP-006,False,-8,False,0
+CMP-1011,PLT-2000,41,5945.0,Pipe Assembly DN50,12,20,B,Y,Important,SUP-006,False,-29,False,-21
+CMP-1012,PLT-1000,34,10540.0,Filter Housing Standard,8,15,A,Y,Important,SUP-006,False,-26,False,-19
+CMP-1012,PLT-2000,20,6200.0,Filter Housing Standard,8,15,A,Y,Important,SUP-006,False,-12,False,-5
+CMP-1013,PLT-1000,18,504.0,Filter Cartridge 10 Micron,30,60,C,X,Normal,SUP-005,True,12,True,42
+CMP-1013,PLT-2000,24,672.0,Filter Cartridge 10 Micron,30,60,C,X,Normal,SUP-005,True,6,True,36
+CMP-1014,PLT-1000,28,8120.0,Dosing Pump 2 L/h,6,12,A,Z,Critical,SUP-001,False,-22,False,-16
+CMP-1014,PLT-2000,44,12760.0,Dosing Pump 2 L/h,6,12,A,Z,Critical,SUP-001,False,-38,False,-32
+CMP-1015,PLT-1000,610,2745.0,PVC Hose 10 mm,100,200,C,X,Normal,SUP-008,False,-510,False,-410
+CMP-1015,PLT-2000,15,67.5,PVC Hose 10 mm,100,200,C,X,Normal,SUP-008,True,85,True,185

@@ -1,0 +1,7 @@
+Material_ID,Plant_ID_Shortage,Unrestricted_Qty_Shortage,Inventory_Value_EUR,Material_Name,Safety_Stock_Qty_Shortage,Reorder_Point_Qty,ABC_Class,XYZ_Class,Criticality,Preferred_Supplier_ID,Below_Safety_Stock,Safety_Stock_Gap,Below_Reorder_Point,Reorder_Gap,Plant_ID_Source,Unrestricted_Qty_Source,Safety_Stock_Qty_Source,Indicative_Transfer_Qty,Source_Surplus_Qty,Shortage_Qty
+CMP-1001,PLT-1000,7,4480.0,7.5 kW Electric Motor,10,18,A,X,Critical,SUP-001,True,3,True,11,PLT-2000,30,10,3,20,3
+CMP-1002,PLT-1000,15,1230.0,Mechanical Seal Type A,20,35,A,Y,Critical,SUP-002,True,5,True,20,PLT-2000,34,20,5,14,5
+CMP-1003,PLT-2000,24,1104.0,Standard Bearing Set,25,45,B,X,Important,SUP-003,True,1,True,21,PLT-1000,44,25,1,19,1
+CMP-1004,PLT-1000,2,840.0,Control Panel Basic,8,14,A,Z,Critical,SUP-004,True,6,True,12,PLT-2000,43,8,6,35,6
+CMP-1010,PLT-2000,17,306.0,Fastener Kit Standard,40,80,C,X,Normal,SUP-008,True,23,True,63,PLT-1000,260,40,23,220,23
+CMP-1015,PLT-2000,15,67.5,PVC Hose 10 mm,100,200,C,X,Normal,SUP-008,True,85,True,185,PLT-1000,610,100,85,510,85
