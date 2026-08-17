@@ -191,6 +191,42 @@ Or:
 
 This was an important part of the project for me. A KPI becomes more useful when I can connect it to the business process behind it and the decision that may follow.
 
+## Dashboard Walkthrough
+
+The final report was built as a management view of the NordicFlow ERP scenario. It starts from the overall position and then allows the user to investigate inventory, supply, production and operational risk.
+
+### Executive Overview
+
+The overview brings the main ERP signals together in one place. It gives management a quick view before moving into the detailed pages.
+
+![NordicFlow Executive Overview](screenshots/01-executive-overview.png)
+
+### Inventory Position
+
+The inventory page looks deeper into material availability, safety stock, reorder points and stock risk across the manufacturing plants.
+
+![NordicFlow Inventory Analysis](screenshots/02-inventory.png)
+
+### Inventory Rebalancing
+
+A shortage does not always mean that more material should be purchased. This page checks whether excess stock at one plant can support demand at another plant first.
+
+![NordicFlow Inventory Rebalancing](screenshots/03-rebalancing.png)
+
+### Production Performance
+
+The production view connects production-order performance with delays and material shortages. This helped move the analysis from stock position to its possible operational effect.
+
+![NordicFlow Production Analysis](screenshots/05-production.png)
+
+### Management Actions
+
+The final page brings the main findings closer to action. Instead of ending with KPIs only, the aim is to show where management attention may be needed.
+
+![NordicFlow Management Actions](screenshots/08-management-actions.png)
+
+The full report also includes supplier performance, BOM risk, broader risk analysis, drill-through pages and report-page tooltips. These are available in the [`screenshots`](screenshots/) folder.
+
 ## 9. Power BI Skills Used
 
 This project gave me a chance to bring the earlier ERP analysis into one working Power BI solution.
