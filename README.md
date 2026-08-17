@@ -154,3 +154,130 @@ The full Power BI case includes inventory, suppliers, BOM risk, risk analysis, d
 [Explore the complete Power BI project](06-power-bi-executive-dashboard/)
 
 ---
+
+## Tools & Capabilities Demonstrated
+
+NordicFlow combines business understanding with several analytical tools.
+
+| Area | Tools / Methods |
+|---|---|
+| ERP & Business Analysis | Manufacturing processes, procurement, inventory, production, BOM, master data |
+| Data Quality | Excel, profiling, validation rules, issue logs, cleaning and governance |
+| Database & SQL | SQLite, joins, CTEs, CASE logic, views, validation and business queries |
+| Python Analytics | Python, pandas, Jupyter Notebook, reusable analysis and visualisation |
+| Power BI | Power Query, data modelling, DAX, semantic model, drill-through, tooltips and navigation |
+| Decision Support | KPI validation, root-cause investigation, risk prioritisation and management actions |
+
+The tools are important, but the main focus is how they work together around one business problem.
+
+---
+
+## Phase II — Development Roadmap
+
+Projects 01–06 complete the first NordicFlow analytics phase.
+
+The next phase will extend the same ERP environment rather than start another unrelated simulation.
+
+### 07 — Advanced Semantic Model & DAX
+
+Strengthen the analytical model with more reusable measures, KPI definitions, time-based analysis and clearer semantic structure.
+
+**Focus:** stronger Power BI modelling rather than simply adding more dashboard pages.
+
+### 08 — ERP Data Quality Monitoring & Governance
+
+Move from one-time data cleaning toward ongoing control.
+
+This phase will explore data-quality KPIs, ownership, monitoring rules, master-data governance and exception management.
+
+**Focus:** detecting and managing ERP data problems before they affect reporting and decisions.
+
+### 09 — Forecasting & Scenario Analytics
+
+Extend the historical analysis toward forward-looking questions.
+
+Possible areas include inventory risk, material demand, supplier performance trends and operational scenarios.
+
+**Focus:** move from "what happened?" toward "what may happen next?"
+
+### 10 — Fabric & Analytics Engineering
+
+Explore how the current local workflow could move toward a more modern analytics platform.
+
+This may include data pipelines, reusable transformation layers, governed datasets and Microsoft Fabric components where suitable.
+
+**Focus:** improve scalability and reduce dependence on manual analytical steps.
+
+### 11 — AI-Assisted ERP Analysis
+
+Add an AI-assisted investigation layer on top of the governed ERP data and semantic model.
+
+Possible use cases include:
+
+- natural-language questions about ERP performance
+- assisted KPI investigation
+- explanation of unusual business signals
+- support for DAX or analytical development
+- guided exploration of inventory, supplier and production risks
+
+AI will be used as an analytical assistant, not as a replacement for data quality, ERP knowledge or management judgement.
+
+### 12 — Decision Intelligence & Final Integration
+
+Bring the advanced analytical layers together.
+
+The final goal is to connect:
+
+**Business Signal → Root Cause → Scenario → Recommendation → Human Decision / Action**
+
+This phase can also evaluate which parts of the workflow could be automated and which decisions should remain with business owners.
+
+---
+
+## Where AI Fits
+
+AI is intentionally placed later in the NordicFlow roadmap.
+
+The first six projects showed me why this order matters.
+
+If material IDs are wrong, relationships are broken or KPI definitions are unclear, an AI tool can still produce an answer — but the answer may not be trustworthy.
+
+So the planned direction is:
+
+**ERP Business Process → Data Quality → SQL / Python → Semantic Model → Power BI → AI-Assisted Analysis → Human Decision / Action**
+
+The value of AI should come from making reliable business information easier to investigate and use, not from hiding problems in the underlying data.
+
+---
+
+## Repository Guide
+
+If you want a quick view of the project, I recommend this path:
+
+1. Start with the [Power BI Executive Dashboard](06-power-bi-executive-dashboard/) for the final business outcome.
+2. Review the [SQL Business Analysis](04-sql-business-analysis/) to see how the main findings were investigated.
+3. Open the [Python ERP Analytics](05-python-erp-analytics/) for the notebook-based analysis.
+4. Review [Excel Data Engineering](03-excel-data-engineering/) to see how the data was cleaned and validated.
+5. Use the [ERP Data Model](02-erp-data-model/) and [Business & ERP Foundation](01-business-erp-foundation/) for the underlying design and business context.
+
+For a full review, follow Projects 01–06 in numerical order.
+
+---
+
+## Current Status
+
+**Phase I — Projects 01–06: Completed**
+
+**Phase II — Projects 07–12: Planned / In Development**
+
+The repository currently contains the completed Phase I work. Phase II will be added progressively as the NordicFlow environment develops.
+
+---
+
+## Simulation Notice
+
+NordicFlow Manufacturing Oy is fictional.
+
+The company, ERP data and business situations were created for portfolio and learning purposes. The project does not represent a live NordicFlow implementation or client engagement.
+
+The purpose is to demonstrate an end-to-end approach to ERP data, data quality, analytics and business decision support.
