@@ -72,4 +72,26 @@ Power BI Semantic Model
       ↓
 Cross-Functional Business Insights
       ↓
-Management Decisions
+Management Decisions & Actions
+---
+
+## Phase I — Completed ERP Analytics Workflow
+
+The first phase of NordicFlow is complete. It covers Projects 01–06 and follows one business case through the full analytical process.
+
+| Project | Focus | Main Outcome |
+|---|---|---|
+| [01 — Business & ERP Foundation](01-business-erp-foundation/) | Business and ERP requirements | Defined the business problem, processes, stakeholders and decision needs |
+| [02 — ERP Data Model & Baseline](02-erp-data-model/) | ERP data architecture | Defined entities, keys, relationships, grain and business rules |
+| [03 — Excel Data Engineering](03-excel-data-engineering/) | Data quality and preparation | Profiled, cleaned and validated the ERP dataset |
+| [04 — SQL Business Analysis](04-sql-business-analysis/) | Business investigation | Analysed inventory, suppliers, production and cross-plant risks |
+| [05 — Python ERP Analytics](05-python-erp-analytics/) | Analytics and automation | Built repeatable KPI, risk and management-level analytical outputs |
+| [06 — Power BI Executive Dashboard](06-power-bi-executive-dashboard/) | Decision support | Connected the analysis into an interactive management reporting solution |
+
+These projects are not separate tool demonstrations. Each stage uses the previous stage and moves the same ERP case forward.
+
+The completed Phase I can be summarised as:
+
+**Business Problem → ERP Data → Data Quality → SQL → Python → Semantic Model → Power BI → Management Decision / Action**
+
+---
